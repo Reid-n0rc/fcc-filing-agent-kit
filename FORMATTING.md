@@ -53,8 +53,8 @@ that docket). Confirm the applicable rule before drafting:
   arguments, and data supporting the request, and must indicate how the petitioner's
   interests are affected. Petitions that are moot, premature, repetitive, or frivolous may
   be dismissed without prejudice — which is itself a reason to research prior attempts
-  thoroughly (see `AGENTS.md`'s ECFS research workflow) so the filing doesn't read as
-  repetitive of something already denied on the merits.
+  thoroughly (see `RESEARCH.md`) so the filing doesn't read as repetitive of something
+  already denied on the merits.
 - **Petition for Reconsideration — § 1.106 / § 1.429.** Must be filed within 30 days of
   public notice of the Commission action being reconsidered (§ 1.106(f) for rulemaking
   proceedings). After that window closes, reconsideration is no longer available, and a
@@ -85,6 +85,29 @@ that docket). Confirm the applicable rule before drafting:
   formal register of a document meant to be read and cited by agency staff and potentially
   courts. Underlining is conventionally reserved for legislative-drafting redlines
   (proposed insertions), not for emphasis.
+
+## Citation conventions
+
+- **Legal citations use standard Bluebook-style form**: agency order number, docket number,
+  reporter citation if published (e.g., *FCC Rcd*), pinpoint paragraph cite (¶) where
+  applicable, and adopted/released dates. Example: `FCC 10-189, WT Docket No. 09-209, 25
+  FCC Rcd 16351, ¶ 22 (adopted Nov. 2, 2010; released Nov. 8, 2010)`.
+- **Web-page and news citations get a live URL and a "(last visited [date])" note.**
+  Official legal citations (CFR sections, treaty text, formally published agency orders not
+  filed in ECFS) generally do not need a URL — that's not standard legal citation practice
+  — **except** any citation to a filing that is itself in ECFS, which should always include
+  the ECFS filing-detail permalink (see `RESEARCH.md`) and a "last visited" date, so a
+  reader can pull the actual document.
+- **Protect multi-word citation tokens from line-wrap** in the rendered output (non-breaking
+  spaces between "FCC" and its number, within "WT Docket No. 95-57", within "47 C.F.R. §
+  97.3", between "¶" and its number, etc.).
+- **Repeat citations reuse the same footnote/citation number** rather than adding a new "See
+  note N, supra" — if the build tooling is Markdown + a Python renderer, check whether it
+  already handles repeat footnote references correctly (a naive implementation can silently
+  drop the note text on repeat calls); verify by rendering and checking the output.
+- Use footnotes/citations **only where they are actually needed** — to support a factual or
+  legal claim — not decoratively on every sentence. A filing dense with unnecessary
+  citations is harder to read and dilutes the citations that matter.
 
 ## Verifying compliance
 

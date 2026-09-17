@@ -18,12 +18,16 @@ draft petition.
 
 ## What's in here
 
-- [`AGENTS.md`](./AGENTS.md) — the persona, research standards, ECFS research workflow, and
+- [`AGENTS.md`](./AGENTS.md) — the persona, non-negotiable research standards, and
   repository conventions any agent (human or AI) should follow when preparing a new filing.
-  Read this first.
-- [`FORMATTING.md`](./FORMATTING.md) — the legal formatting requirements a filing must meet
-  (47 C.F.R. § 1.49 paper/type/spacing rules, content requirements by filing type), kept
-  independent of any specific rendering tool.
+  Kept short on purpose, since `CLAUDE.md` loads it into every session automatically. Read
+  this first.
+- [`RESEARCH.md`](./RESEARCH.md) — the ECFS research workflow (how to search for prior
+  filings, orders, and comments in a docket). Read on demand, not auto-loaded.
+- [`FORMATTING.md`](./FORMATTING.md) — the legal formatting and citation-convention rules a
+  filing must meet (47 C.F.R. § 1.49 paper/type/spacing rules, content requirements by
+  filing type), kept independent of any specific rendering tool. Read on demand, not
+  auto-loaded.
 - [`CLAUDE.md`](./CLAUDE.md) — loads `AGENTS.md` automatically for Claude Code sessions
   opened in a repo copied from this kit.
 - [`.mcp.json`](./.mcp.json) — configures the `mcp-fcc-ecfs` MCP server for searching the
@@ -33,8 +37,8 @@ draft petition.
 ## How to use this kit
 
 1. Copy this directory to a new repository for the specific filing you're preparing (or
-   copy just `AGENTS.md`, `FORMATTING.md`, `CLAUDE.md`, and `.mcp.json` into an existing
-   one).
+   copy just `AGENTS.md`, `RESEARCH.md`, `FORMATTING.md`, `CLAUDE.md`, and `.mcp.json` into
+   an existing one).
 2. Fill in the **"Filing-specific fields to fill in when starting a new project"** section
    at the bottom of `AGENTS.md` with the type of filing, the rule/docket at issue, the
    petitioner's identity, and a one-paragraph statement of the request.
@@ -62,10 +66,10 @@ Two things follow from that:
 1. **Verify, don't just cite.** Treat anything it returns as a lead to the real filing, not
    a citable source in itself — confirm the actual filing text (via `ecfs_filing_detail` or
    by downloading the underlying PDF from `fcc.gov`/`docs.fcc.gov`) before citing it in a
-   filing meant to go to the Commission. `AGENTS.md` already directs this.
+   filing meant to go to the Commission. `RESEARCH.md` already directs this.
 2. **If you'd rather not route queries through a third-party gateway**, remove
    `.mcp.json` (or its `fcc-ecfs` entry) and use the fallback methods documented in
-   `AGENTS.md`'s ECFS research workflow instead: the official ECFS Public API
+   `RESEARCH.md` instead: the official ECFS Public API
    (`https://publicapi.fcc.gov/ecfs/`, free API key required — register at
    `https://www.fcc.gov/ecfs/help/public_api`), or browser automation against the ECFS web
    UI at `fcc.gov/ecfs/search`.
