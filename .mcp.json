@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "fcc-ecfs": {
+      "url": "https://gateway.pipeworx.io/fcc-ecfs/mcp"
+    }
+  }
+}
