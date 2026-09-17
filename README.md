@@ -73,3 +73,9 @@ Two things follow from that:
    (`https://publicapi.fcc.gov/ecfs/`, free API key required — register at
    `https://www.fcc.gov/ecfs/help/public_api`), or browser automation against the ECFS web
    UI at `fcc.gov/ecfs/search`.
+
+## License
+
+[MIT](./LICENSE). This applies to the kit itself (the instructions and tooling
+configuration) — not to any filing you draft with it, and not a substitute for the legal
+review described in the warning at the top of this file.
