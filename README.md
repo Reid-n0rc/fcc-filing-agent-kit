@@ -76,6 +76,6 @@ Two things follow from that:
 
 ## License
 
-[MIT](./LICENSE). This applies to the kit itself (the instructions and tooling
-configuration) — not to any filing you draft with it, and not a substitute for the legal
-review described in the warning at the top of this file.
+[Apache License 2.0](./LICENSE). This applies to the kit itself (the instructions and
+tooling configuration) — not to any filing you draft with it, and not a substitute for the
+legal review described in the warning at the top of this file.
